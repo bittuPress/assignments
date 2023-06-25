@@ -1,34 +1,26 @@
-// const myDetails = [
-//   {id:3, name: 'hari'},
-//   {id:5, name: 'shyam'},
-//   {id:6, name: 'gopal'},
-// ]
-
-// return only array of ids: expected output  [3,5,6]
-
-// const arr = [2,5,6,7];
+const arr = [2,5,6,7];
 // //calculate the sum of the array using either for of or for in
 
-// let total = 0;
-// for (var i in arr) {
-//   total += arr[i];
-// }
-// console.log(total);
+let total = 0;
+for (var i in arr) {
+  total += arr[i];
+}
+console.log(total);
 
 
-// const myDetails = [
-//   {id:3, name: 'hari'},
-//   {id:5, name: 'shyam'},
-//   {id:6, name: 'gopal'},
-// ]
+const myDetails = [
+  {id:3, name: 'hari'},
+  {id:5, name: 'shyam'},
+  {id:6, name: 'gopal'},
+]
 
 // return only array of ids: expected output  [3,5,6]
 
-// const idDetails = myDetails.map((item) => {
-//   // console.log(item);
-//   return item.id;
-// });
-// console.log(idDetails);
+const idDetails = myDetails.map((item) => {
+  // console.log(item);
+  return item.id;
+});
+console.log(idDetails);
 
 const rideDetails = {
     pickup: 'balaju',
@@ -38,15 +30,12 @@ const rideDetails = {
   };
   
   let distanceNum = parseInt(rideDetails.distance);
-  
-  // let finalPrice = rideDetails.unitKmPrice * distanceNum;
-  // console.log(finalPrice);
-  
   let unitKmPrice = rideDetails.unitKmPrice;
   function finalPrice(distanceNum, unitKmPrice){
     console.log(unitKmPrice * distanceNum);
   }
-  finalPrice(distanceNum,unitKmPrice);
+
+  finalPrice(distanceNum,unitKmPrice); //function to calculate final price of ride
   
   //Q2 write a js function that checks if the object has status success or not
   //should return true or false
@@ -71,26 +60,3 @@ const rideDetails = {
   console.log(checkIfSucces(status1));  //should return false
   
   console.log(checkIfSucces(status2));  //should return true
-  
-  
-  //object issues
-  const totalMarks = 150;
-  const obj = {
-    computer:42,
-    maths:42,
-    science:50
-  }
-  const values = Object.values(obj);
-  const sumOfMarks = values.reduce((accumulator, value) => {
-    return accumulator + value;
-  }, 0);
-  
-  const totalPercentage = sumOfMarks/totalMarks * 100;
-  console.log(totalPercentage);
-  
-  //random numbers between 1 to 5
-  
-//   function randNumber(min,max){
-//     return Math.random() * (max - min) + min;
-//   }
-//   randNumber(1,5);
