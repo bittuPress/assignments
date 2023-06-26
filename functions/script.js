@@ -60,3 +60,17 @@ const rideDetails = {
   console.log(checkIfSucces(status1));  //should return false
   
   console.log(checkIfSucces(status2));  //should return true
+
+const arr1 = ['ram','shyam','hari']
+const arr2 = ['ram','shyam','hari','gopal','krish']
+
+const otherName = [];
+arr2.map((item) => {
+  // console.log(item);
+  if(!arr1.includes(item)){
+    // console.log(item);
+    otherName.push(item);
+  }
+  
+  })
+  console.log(otherName);
