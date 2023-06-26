@@ -16,7 +16,7 @@ if(item[0] != 'n' && typeof item[0] === 'string')
   return item[0]
 })
 let subjVal = Object.values(userDetails).filter((item) => {
-if(typeof item[0] != 'string')
+if(typeof item === 'number')
 return item
 })
 const newObj = {
