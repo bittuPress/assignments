@@ -5,25 +5,24 @@
 //     subjectScores: [23,35,30]
 // }
 const userDetails={
-    name: "kaylin",
-    maths: 23,
-    science: 35,
-    gk:30
+  name: "kaylin",
+  maths: 23,
+  science: 35,
+  gk:30
 }
-let subCodes = [];
+
+let firstLett = Object.keys(userDetails).filter((item) => {
+if(item[0] != 'n' && typeof item[0] === 'string')
+  return item[0]
+})
+let subjVal = Object.values(userDetails).filter((item) => {
+if(typeof item[0] != 'string')
+return item
+})
 const newObj = {
-  userName : userDetails.name,
-  subjectCodes: subCodes
+userName : userDetails.name,
+subjectCodes: firstLett,
+subjectScores: subjVal
 }
 console.log(newObj);
-
-
-//console.log(Object.keys(userDetails))
-Object.keys(userDetails).map((item, id) => {
-  //console.log(item[0], id)
-  // subCodes.push(item[0])
-  if(item[0] != 'n'){
-  subCodes.push(item[0]);
-  }
-})
-console.log(subCodes);
+//console.log(firstLett);
