@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import "./App.css";
 const App = () => {
-  let [number, setNumber] = useState(10);
+  let [number, setNumber] = useState(10); //useState for updating the values to dom
   const changeCount = (action) => {
     if (action == "inc") {
       if (number >= 10) {
